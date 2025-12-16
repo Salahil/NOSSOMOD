@@ -8,7 +8,7 @@
 			}
 		},
 		"components": {
-			"minecraft:icon": "bone_helmet",
+			"minecraft:icon": "bone_helmet.png",
 			"minecraft:display_name": {
 				"value": "Capacete de Osso"
 			},

@@ -8,7 +8,7 @@
 			}
 		},
 		"components": {
-			"minecraft:icon": "bone_boots",
+			"minecraft:icon": "bone_boots.png",
 			"minecraft:display_name": {
 				"value": "Botas de Osso"
 			},

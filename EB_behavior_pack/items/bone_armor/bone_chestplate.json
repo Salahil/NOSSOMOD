@@ -8,7 +8,7 @@
 			}
 		},
 		"components": {
-			"minecraft:icon": "bone_armor",
+			"minecraft:icon": "bone_armor.png",
 			"minecraft:display_name": {
 				"value": "Peitoral de Osso"
 			},
