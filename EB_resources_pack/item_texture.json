@@ -1,0 +1,18 @@
+{
+	"resource_pack_name": "enormous_bedrock",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bone_helmet": {
+			"textures": "textures/items/bone_helmet"
+		},
+		"bone_chestplate": {
+			"textures": "textures/items/bone_chestplate"
+		},
+		"bone_leggings": {
+			"textures": "textures/items/bone_leggings"
+		},
+		"bone_boots": {
+			"textures": "textures/items/bone_boots"
+		}
+	}
+}
