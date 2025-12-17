@@ -1,0 +1,21 @@
+{
+	"format_version": "1.20.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "enormousbedrock:recipe_bone_leggings"
+		},
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"ABA",
+			"CDC",
+			"A A"
+		],
+		"key": {
+			"A": { "item": "minecraft:bone" },
+			"B": { "item": "minecraft:bone_meal" },
+			"C": { "item": "minecraft:iron_ingot" },
+			"D": { "item": "minecraft:leather" }
+		},
+		"result": { "item": "enormousbedrock:bone_leggings" }
+	}
+}

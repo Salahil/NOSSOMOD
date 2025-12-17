@@ -2,6 +2,10 @@
 	"resource_pack_name": "enormous_bedrock",
 	"texture_name": "atlas.items",
 	"texture_data": {
+		
+		"morganite_fragment": {
+			"textures": "textures/items/morganite_fragment"
+		},
 		"bone_helmet": {
 			"textures": "textures/items/bone_helmet"
 		},

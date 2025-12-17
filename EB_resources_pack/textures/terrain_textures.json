@@ -1,0 +1,12 @@
+{
+	"resource_pack_name": "enormous_bedrock",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"enormousbedrock:morganite_ore": {
+			"textures": "textures/blocks/morganite_ore"
+		},
+		"enormousbedrock:deepslate_morganite_ore": {
+			"textures": "textures/blocks/deepslate_morganite_ore"
+		}
+	}
+}

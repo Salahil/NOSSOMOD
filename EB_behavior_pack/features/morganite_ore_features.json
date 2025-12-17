@@ -1,0 +1,22 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "enormousbedrock:morganite_ore_feature"
+		},
+		"count": 4,
+		"places_block": "enormousbedrock:deepslate_morganite_ore",
+		"may_replace": [
+			{
+				"name": "minecraft:deepslate",
+				"min_y": -64,
+				"max_y": 0
+			},
+			{
+				"name": "minecraft:tuff",
+				"min_y": -64,
+				"max_y": 0
+			}
+		]
+	}
+}

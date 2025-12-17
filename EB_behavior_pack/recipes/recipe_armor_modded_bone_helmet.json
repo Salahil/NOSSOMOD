@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "enormousbedrock:recipe_bone_helmet"
+		},
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"ABA",
+			"ACA",
+			"A A"
+		],
+		"key": {
+			"A": { "item": "minecraft:bone_meal" },
+			"B": { "item": "minecraft:bone" },
+			"C": { "item": "minecraft:iron_ingot" }
+		},
+		"result": { "item": "enormousbedrock:bone_helmet" }
+	}
+}
