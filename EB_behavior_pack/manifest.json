@@ -4,7 +4,7 @@
 		"description": "Itens e Lógica do Enormous Bedrock",
 		"name": "Enormous Bedrock BP",
 		"uuid": "bb744d54-f371-4baa-8130-42ff54cec886",
-		"version": [1, 0, 0],
+		"version": [1, 0, 3],
 		"min_engine_version": [1, 21, 0]
 	},
 	"modules": [
@@ -12,13 +12,13 @@
 			"description": "Behavior Pack",
 			"type": "data",
 			"uuid": "e010fc86-277d-474e-89d4-3383c5c8846f",
-			"version": [1, 0, 0]
+			"version": [1, 0, 3]
 		}
 	],
 	"dependencies": [
 		{
 			"uuid": "f45385c8-ba57-4631-a1ff-e759fd17957d",
-			"version": [1, 0, 0]
+			"version": [1, 0, 3]
 		}
 	]
 }
