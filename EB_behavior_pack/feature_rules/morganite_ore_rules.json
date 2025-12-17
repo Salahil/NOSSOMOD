@@ -6,7 +6,7 @@
 			"places_feature": "enormousbedrock:morganite_ore_feature"
 		},
 		"conditions": {
-			"placement_pass": "underground_pass",
+			"placement_pass": "surface_pass", 
 			"minecraft:biome_filter": [
 				{
 					"test": "has_biome_tag",
@@ -16,15 +16,15 @@
 			]
 		},
 		"distribution": {
-			"iterations": 2,
-			"scatter_chance": 10.0,
+			"iterations": 4,
+			"scatter_chance": 25.0,
 			"x": {
 				"distribution": "uniform",
 				"extent": [ 0, 16 ]
 			},
 			"y": {
 				"distribution": "uniform",
-				"extent": [ -64, 0 ]
+				"extent": [ -64, 20 ]
 			},
 			"z": {
 				"distribution": "uniform",
