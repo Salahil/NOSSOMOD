@@ -8,7 +8,7 @@
 			}
 		},
 		"components": {
-			"minecraft:icon": "bone_leggings.png",
+			"minecraft:icon": "bone_leggings_icon",
 			"minecraft:display_name": {
 				"value": "Perneiras de Osso"
 			},

@@ -8,6 +8,12 @@
 			}
 		},
 		"components": {
+            "minecraft:material_instances": {
+				"*": {
+					"texture": "enormousbedrock:deepslate_morganite_ore",
+					"render_method": "opaque"
+				}
+			},
 			"minecraft:experience_drop": {
 				"min": 15,
 				"max": 18

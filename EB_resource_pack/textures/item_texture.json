@@ -2,20 +2,19 @@
 	"resource_pack_name": "enormous_bedrock",
 	"texture_name": "atlas.items",
 	"texture_data": {
-		
-		"morganite_fragment": {
+		"morganite_fragment_icon": {
 			"textures": "textures/items/morganite_fragment"
 		},
-		"bone_helmet": {
+		"bone_helmet_icon": {
 			"textures": "textures/items/bone_helmet"
 		},
-		"bone_chestplate": {
+		"bone_chestplate_icon": {
 			"textures": "textures/items/bone_chestplate"
 		},
-		"bone_leggings": {
+		"bone_leggings_icon": {
 			"textures": "textures/items/bone_leggings"
 		},
-		"bone_boots": {
+		"bone_boots_icon": {
 			"textures": "textures/items/bone_boots"
 		}
 	}

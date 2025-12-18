@@ -33,10 +33,7 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
                 z: block.location.z + 0.5 
             };
             
-            // Cria o item no mundo
             dimension.spawnItem(new ItemStack(DROP_ITEM, 1), location);
-            
-            // Removido o som e mensagem conforme pedido
         }
     }
 });

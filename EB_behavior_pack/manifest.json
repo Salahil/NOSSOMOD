@@ -4,7 +4,7 @@
 		"description": "Itens e Lógica do Enormous Bedrock",
 		"name": "Enormous Bedrock BP",
 		"uuid": "bb744d54-f371-4baa-8130-42ff54cec886",
-		"version": [1, 0, 5],
+		"version": [1, 0, 6],
 		"min_engine_version": [1, 21, 0]
 	},
 	"modules": [
@@ -12,25 +12,25 @@
 			"description": "Behavior Pack",
 			"type": "data",
 			"uuid": "e010fc86-277d-474e-89d4-3383c5c8846f",
-			"version": [1, 0, 5]
+			"version": [1, 0, 6]
 		},
-        {
-            "description": "Scripts do Enormous Bedrock",
-            "type": "script",
-            "language": "javascript",
-            "entry": "scripts/main.js",
-            "version": [1, 0, 5],
-            "uuid": "67246536-1254-4786-9875-125478564125"
-        }
+		{
+			"description": "Scripts do Enormous Bedrock",
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/main.js",
+			"version": [1, 0, 6],
+			"uuid": "67246536-1254-4786-9875-125478564125"
+		}
 	],
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.13.0" 
+			"version": "1.13.0"
 		},
 		{
 			"uuid": "967f3cc6-1604-4a57-83b8-e82f38703c31",
-			"version": [1, 0, 5]
+			"version": [1, 0, 6]
 		}
 	]
 }
