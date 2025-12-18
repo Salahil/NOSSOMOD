@@ -4,7 +4,7 @@
 		"description": "Texturas e Modelos do Enormous Bedrock",
 		"name": "Enormous Bedrock RP",
 		"uuid": "967f3cc6-1604-4a57-83b8-e82f38703c31",
-		"version": [1, 0, 3],
+		"version": [1, 0, 5],
 		"min_engine_version": [1, 21, 0]
 	},
 	"modules": [
@@ -12,7 +12,7 @@
 			"description": "Resource Pack",
 			"type": "resources",
 			"uuid": "675a066d-d66f-49ca-af35-bd18639039e6",
-			"version": [1, 0, 3]
+			"version": [1, 0, 5]
 		}
 	]
 }
