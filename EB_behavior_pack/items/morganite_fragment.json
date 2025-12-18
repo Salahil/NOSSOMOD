@@ -9,11 +9,11 @@
 			}
 		},
 		"components": {
-			"minecraft:icon": "morganite_fragment.png",
+			"minecraft:icon": "morganite_fragment",
 			"minecraft:display_name": {
 				"value": "Fragmento de Morganita"
 			},
-			"minecraft:max_stack_size": 64
+			"minecraft:max_stack_size": 16
 		}
 	}
 }
