@@ -4,13 +4,23 @@
 		"description": {
 			"identifier": "enormousbedrock:morganite_ore_feature"
 		},
-		"count": 8,
-		"places_block": "enormousbedrock:deepslate_morganite_ore",
+		"count": 12,
+		"places_block": "enormousbedrock:morganite_ore",
 		"may_replace": [
 			{
-				"name": "minecraft:sculk",
-				"min_y": -64,
-				"max_y": 10
+				"name": "minecraft:grass_block",
+				"min_y": 60,
+				"max_y": 320
+			},
+			{
+				"name": "minecraft:dirt",
+				"min_y": 60,
+				"max_y": 320
+			},
+             {
+				"name": "minecraft:stone",
+				"min_y": 60,
+				"max_y": 320
 			}
 		]
 	}

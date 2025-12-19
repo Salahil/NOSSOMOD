@@ -8,10 +8,12 @@
 			}
 		},
 		"components": {
-            "minecraft:material_instances": {
+            "minecraft:unit_cube": {},
+			"minecraft:material_instances": {
 				"*": {
-					"texture": "enormousbedrock:deepslate_morganite_ore",
-					"render_method": "opaque"
+					"texture": "enormousbedrock:morganite_ore",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false
 				}
 			},
 			"minecraft:experience_drop": {
@@ -23,7 +25,12 @@
 			},
 			"minecraft:light_emission": 4,
 			"minecraft:loot": "loot_tables/blocks/morganite_ore.json",
-			"minecraft:map_color": "#FFC0CB"
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#0D0D14", 
+            "minecraft:creative_category": { 
+                "category": "nature", 
+                "group": "itemGroup.name.sculk" 
+            }
 		}
 	}
 }
