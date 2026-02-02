@@ -1,19 +1,18 @@
 {
-	"format_version": "1.21.10",
-	"minecraft:item": {
-		"description": {
-			"identifier": "enormousbedrock:morganite_fragment",
-			"menu_category": {
-				"category": "nature",
-				"group": "itemGroup.name.ore"
-			}
-		},
-		"components": {
-			"minecraft:icon": "morganite_fragment_icon",
-			"minecraft:display_name": {
-				"value": "Fragmento de Morganita"
-			},
-			"minecraft:max_stack_size": 16
-		}
-	}
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "enormousbedrock:morganite_fragment",
+      "menu_category": {
+        "category": "nature"
+      }
+    },
+    "components": {
+      "minecraft:icon": "morganite_fragment",
+      "minecraft:display_name": {
+        "value": "Fragmento de Morganita"
+      },
+      "minecraft:max_stack_size": 64
+    }
+  }
 }

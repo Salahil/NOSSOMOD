@@ -1,12 +1,11 @@
 {
-	"resource_pack_name": "enormous_bedrock",
-	"texture_name": "atlas.terrain",
-	"texture_data": {
-		"enormousbedrock:morganite_ore": {
-			"textures": "textures/blocks/morganite_ore"
-		},
-		"enormousbedrock:deepslate_morganite_ore": {
-			"textures": "textures/blocks/deepslate_morganite_ore"
-		}
-	}
+  "resource_pack_name": "Enormous Bedrock RP",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "morganite_ore": {
+      "textures": "textures/blocks/morganite_ore"
+    }
+  }
 }
