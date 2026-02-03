@@ -1,0 +1,22 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": {
+        "identifier": "minecraft:totem_of_undying_custom"
+      },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        " E ",
+        " T ",
+        " E "
+      ],
+      "key": {
+        "T": { "item": "enormousbedrock:totem_of_greed" },
+        "E": { "item": "minecraft:emerald_block" }
+      },
+      "result": {
+        "item": "minecraft:totem_of_undying",
+        "count": 1
+      }
+    }
+  }

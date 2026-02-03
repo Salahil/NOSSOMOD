@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "enormousbedrock:hell_core",
+			"menu_category": {
+				"category": "items" 
+			}
+		},
+		"components": {
+			"minecraft:light_emission": 15,
+			"minecraft:destructible_by_mining": false, 
+			"minecraft:friction": 0.9,
+			"minecraft:map_color": "#FFFFFF",
+			"minecraft:redstone_conductivity": {
+				"redstone_signal": 1
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "hell_core",
+					"render_method": "opaque"
+				}
+			}
+		}
+	}
+}

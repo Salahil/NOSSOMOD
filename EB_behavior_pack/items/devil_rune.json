@@ -1,0 +1,15 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+      "description": {
+        "identifier": "enormousbedrock:devil_rune",
+        "menu_category": { "category": "equipment" }
+      },
+      "components": {
+        "minecraft:icon": "devil_rune",
+        "minecraft:display_name": { "value": "Runa do Diabo" },
+        "minecraft:max_stack_size": 16,
+        "minecraft:glint": true
+      }
+    }
+  }

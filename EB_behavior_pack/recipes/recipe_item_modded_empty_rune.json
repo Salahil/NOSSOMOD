@@ -1,0 +1,22 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": {
+        "identifier": "enormousbedrock:empty_rune"
+      },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "FFF",
+        "FSF",
+        "FFF"
+      ],
+      "key": {
+        "F": { "item": "enormousbedrock:morganite_fragment" },
+        "S": { "item": "minecraft:soul_sand" }
+      },
+      "result": {
+        "item": "enormousbedrock:empty_rune",
+        "count": 1
+      }
+    }
+  }

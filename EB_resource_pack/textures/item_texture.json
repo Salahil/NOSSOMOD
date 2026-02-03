@@ -1,21 +1,19 @@
 {
-	"resource_pack_name": "enormous_bedrock",
+	"resource_pack_name": "Enormous Bedrock RP",
 	"texture_name": "atlas.items",
 	"texture_data": {
-		"morganite_fragment": {
-   		    "textures": "textures/items/morganite_fragment"
-    	},
-		"bone_helmet_icon": {
-			"textures": "textures/items/bone_helmet"
-		},
-		"bone_chestplate_icon": {
-			"textures": "textures/items/bone_chestplate"
-		},
-		"bone_leggings_icon": {
-			"textures": "textures/items/bone_leggings"
-		},
-		"bone_boots_icon": {
-			"textures": "textures/items/bone_boots"
-		}
+	  "empty_rune": { "textures": "textures/items/empty_rune" },
+	  "warrior_rune": { "textures": "textures/items/warrior_rune" },
+	  "emperor_rune": { "textures": "textures/items/emperor_rune" },
+	  "tinker_rune": { "textures": "textures/items/tinker_rune" },
+	  "noble_rune": { "textures": "textures/items/noble_rune" },
+	  "immortal_rune": { "textures": "textures/items/immortal_rune" },
+	  "sorcerer_rune": { "textures": "textures/items/sorcerer_rune" },
+	  "guardian_rune": { "textures": "textures/items/guardian_rune" },
+	  "devil_rune": { "textures": "textures/items/devil_rune" },
+	  
+	  "morganite_fragment": { "textures": "textures/items/morganite_fragment" },
+	  "broken_totem": { "textures": "textures/items/broken_totem" },
+	  "totem_of_greed": { "textures": "textures/items/totem_of_greed" }
 	}
-}
+  }
