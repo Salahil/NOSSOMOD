@@ -1,0 +1,56 @@
+[
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:golden_chestplate" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "F F",
+        "IBI",
+        "LIL"
+      ],
+      "key": {
+        "F": { "item": "minecraft:rabbit_hide" },
+        "I": { "item": "minecraft:gold_ingot" },
+        "B": { "item": "minecraft:gold_block" },
+        "L": { "item": "minecraft:leather" }
+      },
+      "result": { "item": "minecraft:golden_chestplate" }
+    }
+  },
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:golden_leggings" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "ILI",
+        "ILI",
+        "I I"
+      ],
+      "key": {
+        "I": { "item": "minecraft:gold_ingot" },
+        "L": { "item": "minecraft:leather" }
+      },
+      "result": { "item": "minecraft:golden_leggings" }
+    }
+  },
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:golden_boots" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "   ",
+        "I I",
+        "FLF"
+      ],
+      "key": {
+        "I": { "item": "minecraft:gold_ingot" },
+        "F": { "item": "minecraft:rabbit_hide" },
+        "L": { "item": "minecraft:leather" }
+      },
+      "result": { "item": "minecraft:golden_boots" }
+    }
+  }
+]

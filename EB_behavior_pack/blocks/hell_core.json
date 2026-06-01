@@ -9,7 +9,10 @@
 		},
 		"components": {
 			"minecraft:light_emission": 15,
-			"minecraft:destructible_by_mining": false, 
+			"minecraft:destructible_by_mining": false,
+			"minecraft:movable": {
+				"movement_type": "popped"
+			},
 			"minecraft:friction": 0.9,
 			"minecraft:map_color": "#FFFFFF",
 			"minecraft:redstone_conductivity": {

@@ -1,27 +1,23 @@
-// Importa os sistemas para que eles comecem a rodar
+/**
+ * Enormous Bedrock — ponto de entrada dos scripts.
+ * Só importa módulos; a lógica fica em systems/.
+ */
+
+// Combate e progressão
 import "./systems/mana.js";
 import "./systems/combat.js";
 import "./systems/passive.js";
-import "./systems/crafting.js";
 
-// Lógica isolada que sobrou (Drop da Morganita e Totem)
-// Você pode mover isso para um systems/world.js se quiser ser perfeccionista,
-// mas pode deixar aqui também.
+// Crafting / rituais
+import "./systems/crafting/enchanting_runes.js";
+import "./systems/crafting/runes.js";
 
-import { world, system, ItemStack, EntityComponentTypes, ItemComponentTypes } from "@minecraft/server";
-import { CONFIG } from "./config.js";
+// Mundo (hell core e derivados)
+import "./systems/world/morganite.js";
+import "./systems/world/totem_greed.js";
+import "./systems/world/vacuum_hopper.js";
+import "./systems/world/hell_core_piston.js";
 
-// Drop Morganita
-world.afterEvents.playerBreakBlock.subscribe((event) => {
-    // ... (Código do drop que já fizemos) ...
-    // Use CONFIG.morganite...
-});
-
-// Totem
-world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
-    // ... (Código do vinculo do totem) ...
-});
-
-world.beforeEvents.entityDie.subscribe((event) => {
-    // ... (Código da morte do totem) ...
-});
+// Sobrevivência
+import "./systems/survival/durability.js";
+import "./systems/survival/arrow_recovery.js";

@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "enormousbedrock:rune_workbench",
+			"menu_category": {
+				"category": "none",
+				"is_hidden_in_commands": true
+			}
+		},
+		"components": {
+			"minecraft:display_name": "Altar de Runas",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.8
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rune_workbench",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:inventory": {
+				"container_type": "hopper",
+				"inventory_size": 3,
+				"can_be_siphoned_from": true,
+				"restrict_to_owner": false
+			}
+		}
+	}
+}

@@ -2,7 +2,8 @@ export const CONFIG = {
     // Morganita
     morganite: {
         item: "enormousbedrock:morganite_fragment",
-        chance: 0.1, // 10%
+        // Produção: ~0.01–0.05. Testes: 0.5 ou 1.0
+        chance: 0.5,
         targetBlock: "minecraft:sculk",
         sound: "mob.ghast.scream"
     },
@@ -28,6 +29,79 @@ export const CONFIG = {
         sorcerer: { id: "enormousbedrock:sorcerer_rune", name: "§dRuna: Feiticeiro",trigger: "minecraft:nether_star" },
         guardian: { id: "enormousbedrock:guardian_rune", name: "§5Runa: Guardião",  trigger: "minecraft:amethyst_shard" },
         devil:    { id: "enormousbedrock:devil_rune",    name: "§4Runa: Diabo",     trigger: "minecraft:redstone" }
+    },
+    hellCore: {
+        id: "enormousbedrock:hell_core"
+    },
+    runeForge: {
+        emptyRune: "enormousbedrock:empty_rune",
+        // Janela em ticks para validar encantamento após abrir a mesa (8s)
+        sessionWindowTicks: 160,
+        // Distância máxima do jogador até a mesa vinculada no momento da conversão
+        maxDistanceFromTable: 6,
+        // Probabilidade ponderada por tier (soma não precisa ser 1)
+        tiers: {
+            1: [
+                { id: "enormousbedrock:warrior_rune", weight: 65 },
+                { id: "enormousbedrock:guardian_rune", weight: 35 }
+            ],
+            2: [
+                { id: "enormousbedrock:noble_rune", weight: 55 },
+                { id: "enormousbedrock:tinker_rune", weight: 30 },
+                { id: "enormousbedrock:sorcerer_rune", weight: 15 }
+            ],
+            3: [
+                { id: "enormousbedrock:emperor_rune", weight: 60 },
+                { id: "enormousbedrock:immortal_rune", weight: 28 },
+                { id: "enormousbedrock:devil_rune", weight: 12 }
+            ]
+        },
+        lightning: {
+            radius: 20,
+            minSeconds: 5,
+            maxSeconds: 15,
+            scanIntervalTicks: 40
+        }
+    },
+    vacuumHopper: {
+        radius: 15,
+        pullStrength: 0.99,
+        collectHeight: 0.65,
+        tickInterval: 4
+    },
+    pistonBuff: {
+        maxChain: 12,
+        immovableBlocks: [
+            "minecraft:bedrock",
+            "minecraft:obsidian",
+            "minecraft:crying_obsidian",
+            "minecraft:barrier",
+            "minecraft:end_portal",
+            "minecraft:end_portal_frame",
+            "minecraft:nether_portal",
+            "minecraft:respawn_anchor"
+        ]
+    },
+    durability: {
+        tags: {
+            oxidationImmune: "enormousbedrock:oxidation_immune",
+            fireImmune: "enormousbedrock:fire_immune_armor"
+        },
+        tool: {
+            correctUseSaveChance: 0.55,
+            wrongUseExtraDamage: 1,
+            swordOnMobSaveChance: 0.7,
+            swordOnPlantExtra: 3,
+            slimeDissolveDamage: 4,
+            axeOnShieldSaveChance: 0.5
+        },
+        armor: {
+            combatWearMultiplier: 0.22,
+            fireDamagePerTick: 5,
+            waterDamageInterval: 40,
+            waterDamageAmount: 3
+        },
+        arrowRecoveryChance: 0.2
     }
 };
 

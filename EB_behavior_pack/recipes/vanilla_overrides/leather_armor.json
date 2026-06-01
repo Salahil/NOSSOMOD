@@ -1,0 +1,56 @@
+[
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:leather_chestplate" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "ILI",
+        "ILI",
+        "IFI"
+      ],
+      "key": {
+        "I": { "item": "minecraft:leather" },
+        "L": { "item": "minecraft:string" },
+        "F": { "item": "minecraft:rabbit_hide" }
+      },
+      "result": { "item": "minecraft:leather_chestplate" }
+    }
+  },
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:leather_leggings" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "ILI",
+        "I I",
+        "F F"
+      ],
+      "key": {
+        "I": { "item": "minecraft:leather" },
+        "L": { "item": "minecraft:string" },
+        "F": { "item": "minecraft:rabbit_hide" }
+      },
+      "result": { "item": "minecraft:leather_leggings" }
+    }
+  },
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:leather_boots" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "   ",
+        "ILI",
+        "FLF"
+      ],
+      "key": {
+        "I": { "item": "minecraft:leather" },
+        "L": { "item": "minecraft:string" },
+        "F": { "item": "minecraft:rabbit_hide" }
+      },
+      "result": { "item": "minecraft:leather_boots" }
+    }
+  }
+]

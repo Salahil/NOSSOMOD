@@ -8,7 +8,14 @@
       "components": {
         "minecraft:icon": "empty_rune",
         "minecraft:display_name": { "value": "Runa Vazia" },
-        "minecraft:max_stack_size": 16
+        "minecraft:max_stack_size": 1,
+        "minecraft:enchantable": {
+          "slot": "all",
+          "value": 10
+        },
+        "minecraft:enchantments": {
+          "value": {}
+        }
       }
     }
   }

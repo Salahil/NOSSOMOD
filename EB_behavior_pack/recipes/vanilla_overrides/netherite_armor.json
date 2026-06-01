@@ -1,0 +1,74 @@
+[
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:netherite_helmet" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "III",
+        "ILI",
+        "F F"
+      ],
+      "key": {
+        "I": { "item": "minecraft:netherite_ingot" },
+        "L": { "item": "minecraft:leather" },
+        "F": { "item": "minecraft:rabbit_hide" }
+      },
+      "result": { "item": "minecraft:netherite_helmet" }
+    }
+  },
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:netherite_chestplate" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "F F",
+        "IBI",
+        "LIL"
+      ],
+      "key": {
+        "F": { "item": "minecraft:rabbit_hide" },
+        "I": { "item": "minecraft:netherite_ingot" },
+        "B": { "item": "minecraft:netherite_block" },
+        "L": { "item": "minecraft:leather" }
+      },
+      "result": { "item": "minecraft:netherite_chestplate" }
+    }
+  },
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:netherite_leggings" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "ILI",
+        "ILI",
+        "I I"
+      ],
+      "key": {
+        "I": { "item": "minecraft:netherite_ingot" },
+        "L": { "item": "minecraft:leather" }
+      },
+      "result": { "item": "minecraft:netherite_leggings" }
+    }
+  },
+  {
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+      "description": { "identifier": "minecraft:netherite_boots" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "   ",
+        "I I",
+        "FLF"
+      ],
+      "key": {
+        "I": { "item": "minecraft:netherite_ingot" },
+        "F": { "item": "minecraft:rabbit_hide" },
+        "L": { "item": "minecraft:leather" }
+      },
+      "result": { "item": "minecraft:netherite_boots" }
+    }
+  }
+]

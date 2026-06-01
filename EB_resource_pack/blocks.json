@@ -1,0 +1,9 @@
+{
+  "format_version": "1.21.40",
+  "enormousbedrock:hell_core": {
+    "sound": "stone"
+  },
+  "enormousbedrock:rune_workbench": {
+    "sound": "wood"
+  }
+}

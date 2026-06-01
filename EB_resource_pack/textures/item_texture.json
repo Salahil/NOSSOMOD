@@ -14,6 +14,11 @@
 	  
 	  "morganite_fragment": { "textures": "textures/items/morganite_fragment" },
 	  "broken_totem": { "textures": "textures/items/broken_totem" },
-	  "totem_of_greed": { "textures": "textures/items/totem_of_greed" }
+	  "totem_of_greed": { "textures": "textures/items/totem_of_greed" },
+
+	  "bone_helmet_icon": { "textures": "textures/items/bone_helmet" },
+	  "bone_armor_icon": { "textures": "textures/items/bone_chestplate" },
+	  "bone_leggings_icon": { "textures": "textures/items/bone_leggings" },
+	  "bone_boots_icon": { "textures": "textures/items/bone_boots" }
 	}
   }
