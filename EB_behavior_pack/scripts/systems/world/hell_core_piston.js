@@ -105,20 +105,19 @@ world.afterEvents.pistonActivate.subscribe((event) => {
 // Sistema para trackear o movimento dos hell_cores
 system.runInterval(() => {
     const currentHellCores = new Map();
-    
-    // Encontra todos os hell_cores no mundo carregado
+
     for (const player of world.getAllPlayers()) {
         const dimension = player.dimension;
         const px = Math.floor(player.location.x);
         const py = Math.floor(player.location.y);
         const pz = Math.floor(player.location.z);
-        
-        for (let dx = -16; dx <= 16; dx++) {
-            for (let dy = -8; dy <= 8; dy++) {
-                for (let dz = -16; dz <= 16; dz++) {
+
+        for (let dx = -16; dx <= 16; dx += 4) {
+            for (let dy = -8; dy <= 8; dy += 4) {
+                for (let dz = -16; dz <= 16; dz += 4) {
                     const pos = { x: px + dx, y: py + dy, z: pz + dz };
                     const block = safeGetBlock(dimension, pos.x, pos.y, pos.z);
-                    
+
                     if (block?.typeId === HELL_CORE_ID) {
                         const key = posKey(dimension.id, pos);
                         currentHellCores.set(key, { dimension, pos, block });
@@ -127,16 +126,13 @@ system.runInterval(() => {
             }
         }
     }
-    
-    // Verifica hell_cores que mudaram de posição
+
     for (const [key, data] of currentHellCores) {
-        // Se não estava no mapa antes, é novo ou se moveu
         if (!hellCorePositions.has(key)) {
-            // Verifica se tem pistões adjacentes
             for (const off of ADJACENT_OFFSETS) {
                 const adjPos = blockPosAdd(data.pos, off);
                 const adjBlock = safeGetBlock(data.dimension, adjPos.x, adjPos.y, adjPos.z);
-                
+
                 if (isPiston(adjBlock)) {
                     const face = adjBlock.permutation.getState("facing_direction");
                     if (face !== undefined) {
@@ -146,10 +142,9 @@ system.runInterval(() => {
             }
         }
     }
-    
-    // Atualiza o mapa de posições
+
     hellCorePositions.clear();
     for (const [key, data] of currentHellCores) {
         hellCorePositions.set(key, true);
     }
-}, 2);
+}, 6);

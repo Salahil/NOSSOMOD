@@ -67,7 +67,7 @@ export const CONFIG = {
             radius: 20,
             minSeconds: 5,
             maxSeconds: 15,
-            scanIntervalTicks: 40
+            scanIntervalTicks: 80
         }
     },
     vacuumHopper: {

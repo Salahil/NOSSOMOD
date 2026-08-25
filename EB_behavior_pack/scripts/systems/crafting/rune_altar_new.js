@@ -349,42 +349,50 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
 
 system.runInterval(() => {
   const particlesPerTick = 2;
-  
+  const altarPositions = [];
+
   for (const player of world.getAllPlayers()) {
     const dim = player.dimension;
     const px = Math.floor(player.location.x);
     const py = Math.floor(player.location.y);
     const pz = Math.floor(player.location.z);
-    
-    for (let dx = -8; dx <= 8; dx++) {
-      for (let dy = -4; dy <= 4; dy++) {
-        for (let dz = -8; dz <= 8; dz++) {
+
+    for (let dx = -8; dx <= 8; dx += 4) {
+      for (let dy = -4; dy <= 4; dy += 4) {
+        for (let dz = -8; dz <= 8; dz += 4) {
           try {
             const x = px + dx;
             const y = py + dy;
             const z = pz + dz;
             const block = dim.getBlock({ x, y, z });
-            
+
             if (block?.typeId !== RUNE_ALTAR_BLOCK_ID) continue;
-            
-            const bookKey = `${dim.id}_${x}_${y}_${z}`;
-            if (!bookEntities.has(bookKey)) {
-              spawnBookEntity(dim, x, y, z);
-            }
-            
-            for (let i = 0; i < particlesPerTick; i++) {
-              dim.spawnParticle("enormousbedrock:rune_altar_particle", {
-                x: x + 0.5 + (Math.random() - 0.5),
-                y: y + 0.5 + Math.random() * 1.5,
-                z: z + 0.5 + (Math.random() - 0.5)
-              });
-            }
+            const key = `${dim.id}_${x}_${y}_${z}`;
+            if (altarPositions.some(a => a.key === key)) continue;
+            altarPositions.push({ dim, x, y, z, key });
           } catch {}
         }
       }
     }
   }
-}, 1);
+
+  for (const a of altarPositions) {
+    const { dim, x, y, z, key } = a;
+    if (!bookEntities.has(key)) {
+      spawnBookEntity(dim, x, y, z);
+    }
+
+    for (let i = 0; i < particlesPerTick; i++) {
+      try {
+        dim.spawnParticle("enormousbedrock:rune_altar_particle", {
+          x: x + 0.5 + (Math.random() - 0.5),
+          y: y + 0.5 + Math.random() * 1.5,
+          z: z + 0.5 + (Math.random() - 0.5)
+        });
+      } catch {}
+    }
+  }
+}, 4);
 
 system.runInterval(() => {
     const seen = new Set();

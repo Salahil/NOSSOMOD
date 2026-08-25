@@ -4,7 +4,8 @@
 		"description": {
 			"identifier": "enormousbedrock:hell_core",
 			"menu_category": {
-				"category": "items"
+				"category": "construction",
+				"group": "itemGroup.name.block"
 			}
 		},
 		"components": {

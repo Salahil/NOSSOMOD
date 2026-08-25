@@ -20,7 +20,7 @@ system.runInterval(() => {
     for (const player of world.getPlayers()) {
         armorSnap.set(player.id, snapshotArmor(player));
     }
-}, 1);
+}, 5);
 
 function isOxidationImmune(item) {
     return itemHasTag(item, D.tags.oxidationImmune);
