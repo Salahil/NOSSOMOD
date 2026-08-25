@@ -1,13 +1,22 @@
 import { world, ItemStack } from "@minecraft/server";
 import { CONFIG } from "../../config.js";
 
-world.afterEvents.playerBreakBlock.subscribe((event) => {
-    const blockId = event.block?.typeId;
-    if (blockId !== CONFIG.morganite.targetBlock) return;
+const SCULK_BLOCKS = new Set([
+    "minecraft:sculk",
+    "minecraft:sculk_catalyst",
+    "minecraft:sculk_sensor",
+    "minecraft:sculk_shrieker",
+    "minecraft:sculk_vein"
+]);
+
+function tryDropMorganite(event) {
+    // Após a quebra, event.block já é ar; usar a permutação do bloco quebrado.
+    const blockId = event.brokenBlockPermutation?.type?.id;
+    if (!blockId || !SCULK_BLOCKS.has(blockId)) return;
     if (Math.random() > CONFIG.morganite.chance) return;
 
-    const { dimension, player } = event;
-    const loc = event.block.location;
+    const { dimension, player, block } = event;
+    const loc = block.location;
     dimension.spawnItem(new ItemStack(CONFIG.morganite.item, 1), {
         x: loc.x + 0.5,
         y: loc.y + 0.5,
@@ -15,4 +24,6 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
     });
     dimension.playSound(CONFIG.morganite.sound, loc);
     player.onScreenDisplay.setActionBar("§d§oUm fragmento de morganita brilhou no escuro...");
-});
+}
+
+world.afterEvents.playerBreakBlock.subscribe(tryDropMorganite);

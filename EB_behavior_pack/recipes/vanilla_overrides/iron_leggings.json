@@ -1,19 +1,35 @@
 {
-    "format_version": "1.20.10",
-    "minecraft:recipe_shaped": {
-      "description": {
-        "identifier": "minecraft:iron_leggings"
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:iron_leggings"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ILI",
+      "ILI",
+      "I I"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
       },
-      "tags": [ "crafting_table" ],
-      "pattern": [
-        "ILI",
-        "ILI",
-        "I I"
-      ],
-      "key": {
-        "I": { "item": "minecraft:iron_ingot" },
-        "L": { "item": "minecraft:leather" }
+      "L": {
+        "item": "minecraft:leather"
+      }
+    },
+    "result": {
+      "item": "minecraft:iron_leggings"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
       },
-      "result": { "item": "minecraft:iron_leggings" }
-    }
+      {
+        "item": "minecraft:leather"
+      }
+    ]
   }
+}

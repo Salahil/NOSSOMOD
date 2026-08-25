@@ -1,42 +1,44 @@
-import { world, system, ItemStack, EntityInventoryComponent } from "@minecraft/server";
+import { world, system, ItemStack } from "@minecraft/server";
 import { CONFIG } from "../../config.js";
 
 const TOTEM_STASH_KEY = "eb_totem_stash";
 const TOTEM_PENDING_KEY = "eb_totem_pending";
+const TOTEM_SNAPSHOTS = new Map();
+
+function getInventory(player) {
+    return player.getComponent("minecraft:inventory")?.container;
+}
 
 function playerHasTotem(player) {
-    const inv = player.getComponent(EntityInventoryComponent.componentId);
-    if (!inv?.container) return false;
-    for (let i = 0; i < inv.container.size; i++) {
-        if (inv.container.getItem(i)?.typeId === CONFIG.totem.full) return true;
+    const inv = getInventory(player);
+    if (!inv) return false;
+    for (let i = 0; i < inv.size; i++) {
+        if (inv.getItem(i)?.typeId === CONFIG.totem.full) return true;
     }
     return false;
 }
 
-function consumeOneTotem(player) {
-    const inv = player.getComponent(EntityInventoryComponent.componentId);
-    if (!inv?.container) return;
-    for (let i = 0; i < inv.container.size; i++) {
-        const stack = inv.container.getItem(i);
-        if (stack?.typeId !== CONFIG.totem.full) continue;
-        if (stack.amount > 1) {
-            stack.amount -= 1;
-            inv.container.setItem(i, stack);
-        } else {
-            inv.container.setItem(i, undefined);
+function removeOneTotemFromSaved(saved) {
+    if (!saved?.inventory) return saved;
+    for (const entry of saved.inventory) {
+        if (entry.typeId !== CONFIG.totem.full) continue;
+        entry.amount -= 1;
+        if (entry.amount <= 0) {
+            saved.inventory = saved.inventory.filter((e) => e !== entry);
         }
-        return;
+        return saved;
     }
+    return saved;
 }
 
 function serializePlayerItems(player) {
-    const inv = player.getComponent(EntityInventoryComponent.componentId);
+    const inv = getInventory(player);
     const equip = player.getComponent("equippable");
     const saved = { inventory: [], equipment: {} };
 
-    if (inv?.container) {
-        for (let i = 0; i < inv.container.size; i++) {
-            const stack = inv.container.getItem(i);
+    if (inv) {
+        for (let i = 0; i < inv.size; i++) {
+            const stack = inv.getItem(i);
             if (!stack) continue;
             saved.inventory.push({
                 slot: i,
@@ -61,26 +63,13 @@ function serializePlayerItems(player) {
     return saved;
 }
 
-function clearPlayerItems(player) {
-    const inv = player.getComponent(EntityInventoryComponent.componentId);
-    if (inv?.container) {
-        for (let i = 0; i < inv.container.size; i++) inv.container.setItem(i, undefined);
-    }
-    const equip = player.getComponent("equippable");
-    if (equip) {
-        for (const slot of ["Head", "Chest", "Legs", "Feet", "Offhand", "Mainhand"]) {
-            equip.setEquipment(slot, undefined);
-        }
-    }
-}
-
 function restorePlayerItems(player, saved) {
-    const inv = player.getComponent(EntityInventoryComponent.componentId);
-    if (inv?.container && saved.inventory) {
+    const inv = getInventory(player);
+    if (inv && saved.inventory) {
         for (const entry of saved.inventory) {
             const stack = new ItemStack(entry.typeId, entry.amount);
             if (entry.lore?.length) stack.setLore(entry.lore);
-            inv.container.setItem(entry.slot, stack);
+            inv.setItem(entry.slot, stack);
         }
     }
     const equip = player.getComponent("equippable");
@@ -93,16 +82,60 @@ function restorePlayerItems(player, saved) {
     }
 }
 
-world.beforeEvents.entityDie.subscribe((event) => {
-    const entity = event.deadEntity;
-    if (entity?.typeId !== "minecraft:player") return;
-    if (!playerHasTotem(entity)) return;
+function clearDeathDrops(dim, location, radius = 10) {
+    try {
+        const items = dim.getEntities({
+            type: "minecraft:item",
+            location,
+            maxDistance: radius
+        });
+        for (const entity of items) {
+            entity.kill();
+        }
+    } catch { /* chunk inválido */ }
+}
 
-    entity.setDynamicProperty(TOTEM_STASH_KEY, JSON.stringify(serializePlayerItems(entity)));
-    entity.setDynamicProperty(TOTEM_PENDING_KEY, true);
-    consumeOneTotem(entity);
-    clearPlayerItems(entity);
-});
+function handleTotemDeath(player) {
+    const snapshot = TOTEM_SNAPSHOTS.get(player.id) ?? serializePlayerItems(player);
+    const hadTotem =
+        playerHasTotem(player) ||
+        snapshot.inventory?.some((e) => e.typeId === CONFIG.totem.full) ||
+        Object.values(snapshot.equipment ?? {}).some((e) => e.typeId === CONFIG.totem.full);
+
+    if (!hadTotem) return;
+
+    const saved = removeOneTotemFromSaved(JSON.parse(JSON.stringify(snapshot)));
+    const deathLoc = { ...player.location };
+
+    try {
+        player.setDynamicProperty(TOTEM_STASH_KEY, JSON.stringify(saved));
+        player.setDynamicProperty(TOTEM_PENDING_KEY, true);
+    } catch {
+        return;
+    }
+
+    system.run(() => clearDeathDrops(player.dimension, deathLoc));
+    TOTEM_SNAPSHOTS.delete(player.id);
+}
+
+system.runInterval(() => {
+    for (const player of world.getPlayers()) {
+        if (playerHasTotem(player)) {
+            TOTEM_SNAPSHOTS.set(player.id, serializePlayerItems(player));
+        } else {
+            TOTEM_SNAPSHOTS.delete(player.id);
+        }
+    }
+}, 10);
+
+const entityDieAfter = world.afterEvents?.entityDie;
+if (entityDieAfter) {
+    entityDieAfter.subscribe((event) => {
+        const entity = event.deadEntity;
+        if (entity?.typeId !== "minecraft:player") return;
+        handleTotemDeath(entity);
+    });
+}
 
 world.afterEvents.playerSpawn.subscribe((event) => {
     const player = event.player;

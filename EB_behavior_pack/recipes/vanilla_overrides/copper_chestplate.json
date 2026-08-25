@@ -1,0 +1,44 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:copper_chestplate"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "F F",
+      "IBI",
+      "LIL"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:rabbit_hide"
+      },
+      "I": {
+        "item": "minecraft:copper_ingot"
+      },
+      "B": {
+        "item": "minecraft:copper_block"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      }
+    },
+    "result": {
+      "item": "minecraft:copper_chestplate"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:rabbit_hide"
+      },
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "item": "minecraft:copper_block"
+      }
+    ]
+  }
+}

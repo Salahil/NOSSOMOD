@@ -3,34 +3,38 @@
 	"header": {
 		"description": "Itens e Lógica do Enormous Bedrock, use com sabedoria... esse é o meu xodó!",
 		"name": "Enormous Bedrock BP",
-		"uuid": "bb744d54-f371-4baa-8130-42ff54cec886",
-		"version": [1, 6, 2026],
+		"uuid": "a96484cc-04c0-41e3-9299-09a36c5d5d8a",
+		"version": [1, 6, 7],
 		"min_engine_version": [1, 21, 0]
 	},
 	"modules": [
 		{
 			"description": "Behavior Pack",
 			"type": "data",
-			"uuid": "e010fc86-277d-474e-89d4-3383c5c8846f",
-			"version": [1, 6, 2026]
+			"uuid": "b091c70a-86e8-4f97-8f6a-f10591a46c4a",
+			"version": [1, 6, 7]
 		},
 		{
 			"description": "Scripts do Enormous Bedrock",
 			"type": "script",
 			"language": "javascript",
 			"entry": "scripts/main.js",
-			"version": [1, 6, 2026],
-			"uuid": "67246536-1254-4786-9875-125478564125"
+			"version": [1, 6, 7],
+			"uuid": "d6860771-0913-40e0-a832-f4f4f32b5d98"
 		}
 	],
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.13.0"
+			"version": "2.0.0"
 		},
 		{
-			"uuid": "967f3cc6-1604-4a57-83b8-e82f38703c31",
-			"version": [1, 6, 2026]
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0"
+		},
+		{
+			"uuid": "c67a1816-6d27-48b9-bb17-9d745236e48f",
+			"version": [1, 6, 7]
 		}
 	]
 }

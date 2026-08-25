@@ -1,0 +1,44 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:golden_chestplate"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "F F",
+      "IBI",
+      "LIL"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:rabbit_hide"
+      },
+      "I": {
+        "item": "minecraft:gold_ingot"
+      },
+      "B": {
+        "item": "minecraft:gold_block"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      }
+    },
+    "result": {
+      "item": "minecraft:golden_chestplate"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:rabbit_hide"
+      },
+      {
+        "item": "minecraft:gold_ingot"
+      },
+      {
+        "item": "minecraft:gold_block"
+      }
+    ]
+  }
+}

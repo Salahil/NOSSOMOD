@@ -1,21 +1,44 @@
 {
-    "format_version": "1.20.10",
-    "minecraft:recipe_shaped": {
-      "description": {
-        "identifier": "minecraft:iron_chestplate"
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:iron_chestplate"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "F F",
+      "IBI",
+      "LIL"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:rabbit_hide"
       },
-      "tags": [ "crafting_table" ],
-      "pattern": [
-        "F F",
-        "IBI",
-        "LIL"
-      ],
-      "key": {
-        "F": { "item": "minecraft:rabbit_hide" },
-        "I": { "item": "minecraft:iron_ingot" },
-        "B": { "item": "minecraft:iron_block" },
-        "L": { "item": "minecraft:leather" }
+      "I": {
+        "item": "minecraft:iron_ingot"
       },
-      "result": { "item": "minecraft:iron_chestplate" }
-    }
+      "B": {
+        "item": "minecraft:iron_block"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      }
+    },
+    "result": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:rabbit_hide"
+      },
+      {
+        "item": "minecraft:iron_ingot"
+      },
+      {
+        "item": "minecraft:iron_block"
+      }
+    ]
   }
+}

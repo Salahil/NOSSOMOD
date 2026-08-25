@@ -9,7 +9,7 @@ import "./systems/combat.js";
 import "./systems/passive.js";
 
 // Crafting / rituais
-import "./systems/crafting/enchanting_runes.js";
+import "./systems/crafting/rune_altar_new.js";
 import "./systems/crafting/runes.js";
 
 // Mundo (hell core e derivados)
@@ -17,6 +17,7 @@ import "./systems/world/morganite.js";
 import "./systems/world/totem_greed.js";
 import "./systems/world/vacuum_hopper.js";
 import "./systems/world/hell_core_piston.js";
+import "./systems/world/golden_egg.js";
 
 // Sobrevivência
 import "./systems/survival/durability.js";

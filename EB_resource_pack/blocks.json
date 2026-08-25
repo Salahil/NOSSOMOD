@@ -1,9 +1,16 @@
 {
-  "format_version": "1.21.40",
+  "format_version": [
+    1,
+    1,
+    0
+  ],
   "enormousbedrock:hell_core": {
     "sound": "stone"
   },
-  "enormousbedrock:rune_workbench": {
-    "sound": "wood"
+  "enormousbedrock:rune_altar": {
+    "sound": "stone"
+  },
+  "enormousbedrock:empty_spawner": {
+    "sound": "metal"
   }
 }

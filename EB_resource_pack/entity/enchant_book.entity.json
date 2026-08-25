@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "enormousbedrock:enchant_book",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/enchant_book" },
+      "geometry": { "default": "geometry.enchant_book" },
+      "animations": {
+        "open": "animation.book.open",
+        "close": "animation.book.close",
+        "page_flip": "animation.book.page_flip",
+        "open_idle": "animation.book.open_idle",
+        "idle": "animation.book.idle",
+        "spin": "animation.book.spin", 
+        "controller": "controller.animation.enchant_book"
+      },
+      "render_controllers": [ "controller.render.enchant_book" ],
+      "scripts": { "animate": [ "controller" ] }
+    }
+  }
+}

@@ -33,10 +33,17 @@ export const CONFIG = {
     hellCore: {
         id: "enormousbedrock:hell_core"
     },
+    goldenEgg: {
+        item: "enormousbedrock:golden_egg",
+        emptySpawner: "enormousbedrock:empty_spawner",
+        chickenDropChance: 0.001
+    },
     runeForge: {
         emptyRune: "enormousbedrock:empty_rune",
-        // Janela em ticks para validar encantamento após abrir a mesa (8s)
-        sessionWindowTicks: 160,
+        // Janela em ticks após usar a mesa (60s)
+        sessionWindowTicks: 1200,
+        // Verifica inventário para converter runa após encantar
+        convertPollTicks: 5,
         // Distância máxima do jogador até a mesa vinculada no momento da conversão
         maxDistanceFromTable: 6,
         // Probabilidade ponderada por tier (soma não precisa ser 1)
@@ -64,7 +71,7 @@ export const CONFIG = {
         }
     },
     vacuumHopper: {
-        radius: 15,
+        radius: 8,
         pullStrength: 0.99,
         collectHeight: 0.65,
         tickInterval: 4

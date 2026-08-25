@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:netherite_leggings"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ILI",
+      "ILI",
+      "I I"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:netherite_ingot"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      }
+    },
+    "result": {
+      "item": "minecraft:netherite_leggings"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:netherite_ingot"
+      },
+      {
+        "item": "minecraft:leather"
+      }
+    ]
+  }
+}

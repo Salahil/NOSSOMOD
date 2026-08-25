@@ -1,26 +1,36 @@
 {
-    "format_version": "1.20.10",
-    "minecraft:recipe_shaped": {
-      "description": {
-        "identifier": "enormousbedrock:totem_of_greed"
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "enormousbedrock:totem_of_greed"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " S ",
+      "STS",
+      " S "
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:soul_sand"
       },
-      "tags": [ "crafting_table" ],
-      "pattern": [
-        " S ",
-        "STS",
-        " S "
-      ],
-      "key": {
-        "S": {
-          "item": "minecraft:soul_sand"
-        },
-        "T": {
-          "item": "enormousbedrock:broken_totem"
-        }
-      },
-      "result": {
-        "item": "enormousbedrock:totem_of_greed",
-        "count": 1
+      "T": {
+        "item": "enormousbedrock:broken_totem"
       }
-    }
+    },
+    "result": {
+      "item": "enormousbedrock:totem_of_greed",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:soul_sand"
+      },
+      {
+        "item": "enormousbedrock:broken_totem"
+      }
+    ]
   }
+}

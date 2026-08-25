@@ -1,24 +1,66 @@
 {
-	"resource_pack_name": "Enormous Bedrock RP",
-	"texture_name": "atlas.items",
-	"texture_data": {
-	  "empty_rune": { "textures": "textures/items/empty_rune" },
-	  "warrior_rune": { "textures": "textures/items/warrior_rune" },
-	  "emperor_rune": { "textures": "textures/items/emperor_rune" },
-	  "tinker_rune": { "textures": "textures/items/tinker_rune" },
-	  "noble_rune": { "textures": "textures/items/noble_rune" },
-	  "immortal_rune": { "textures": "textures/items/immortal_rune" },
-	  "sorcerer_rune": { "textures": "textures/items/sorcerer_rune" },
-	  "guardian_rune": { "textures": "textures/items/guardian_rune" },
-	  "devil_rune": { "textures": "textures/items/devil_rune" },
-	  
-	  "morganite_fragment": { "textures": "textures/items/morganite_fragment" },
-	  "broken_totem": { "textures": "textures/items/broken_totem" },
-	  "totem_of_greed": { "textures": "textures/items/totem_of_greed" },
-
-	  "bone_helmet_icon": { "textures": "textures/items/bone_helmet" },
-	  "bone_armor_icon": { "textures": "textures/items/bone_chestplate" },
-	  "bone_leggings_icon": { "textures": "textures/items/bone_leggings" },
-	  "bone_boots_icon": { "textures": "textures/items/bone_boots" }
-	}
+  "resource_pack_name": "enormousbedrock",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "enormousbedrock:bone_helmet": {
+      "textures": "textures/items/bone_helmet"
+    },
+    "enormousbedrock:bone_chestplate": {
+      "textures": "textures/items/bone_chestplate"
+    },
+    "enormousbedrock:bone_leggings": {
+      "textures": "textures/items/bone_leggings"
+    },
+    "enormousbedrock:bone_boots": {
+      "textures": "textures/items/bone_boots"
+    },
+    "enormousbedrock:broken_totem": {
+      "textures": "textures/items/broken_totem"
+    },
+    "enormousbedrock:devil_rune": {
+      "textures": "textures/items/devil_rune"
+    },
+    "enormousbedrock:emperor_rune": {
+      "textures": "textures/items/emperor_rune"
+    },
+    "enormousbedrock:empty_rune": {
+      "textures": "textures/items/empty_rune"
+    },
+    "enormousbedrock:guardian_rune": {
+      "textures": "textures/items/guardian_rune"
+    },
+    "enormousbedrock:hell_core": {
+      "textures": "textures/items/hell_core"
+    },
+    "enormousbedrock:immortal_rune": {
+      "textures": "textures/items/immortal_rune"
+    },
+    "enormousbedrock:morganite_fragment": {
+      "textures": "textures/items/morganite_fragment"
+    },
+    "enormousbedrock:noble_rune": {
+      "textures": "textures/items/noble_rune"
+    },
+    "enormousbedrock:rune_altar": {
+      "textures": "textures/items/rune_altar"
+    },
+    "enormousbedrock:sorcerer_rune": {
+      "textures": "textures/items/sorcerer_rune"
+    },
+    "enormousbedrock:tinker_rune": {
+      "textures": "textures/items/tinker_rune"
+    },
+    "enormousbedrock:totem_of_greed": {
+      "textures": "textures/items/totem_of_greed"
+    },
+    "enormousbedrock:warrior_rune": {
+      "textures": "textures/items/warrior_rune"
+    },
+    "enormousbedrock:golden_egg": {
+      "textures": "textures/items/golden_egg"
+    },
+    "enormousbedrock:empty_spawner": {
+      "textures": "textures/items/empty_spawner"
+    }
   }
+}

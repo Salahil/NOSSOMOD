@@ -1,14 +1,21 @@
 {
-  "resource_pack_name": "Enormous Bedrock RP",
+  "resource_pack_name": "enormousbedrock",
   "texture_name": "atlas.terrain",
-  "padding": 8,
-  "num_mip_levels": 4,
   "texture_data": {
-    "hell_core": {
+    "enormousbedrock:hell_core": {
       "textures": "textures/blocks/hell_core"
     },
-    "rune_workbench": {
-      "textures": "textures/blocks/hell_core"
+    "enormousbedrock:rune_altar_top": {
+      "textures": "textures/blocks/rune_altar_top"
+    },
+    "enormousbedrock:rune_altar_side": {
+      "textures": "textures/blocks/rune_altar_side"
+    },
+    "enormousbedrock:rune_altar_bottom": {
+      "textures": "textures/blocks/rune_altar_bottom"
+    },
+    "enormousbedrock:empty_spawner": {
+      "textures": "textures/blocks/empty_spawner"
     }
   }
 }

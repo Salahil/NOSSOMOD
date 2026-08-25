@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "enormousbedrock:golden_egg"
+		},
+		"tags": ["crafting_table"],
+		"pattern": ["GGG",
+					"GEG",
+					"GGG"],
+		"key": {
+			"G": { "item": "minecraft:gold_block" },
+			"E": { "item": "minecraft:egg" }
+		},
+		"result": {
+			"item": "enormousbedrock:golden_egg",
+			"count": 1
+		},
+		"unlock": [
+			{ "item": "minecraft:egg" },
+			{ "item": "minecraft:gold_block" }
+		]
+	}
+}

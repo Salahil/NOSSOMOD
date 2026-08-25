@@ -1,0 +1,138 @@
+{
+  "materials": {
+    "version": "1.0.0",
+
+    "xp_furniture_net:entity_alphablend": {
+      "+states": [ "DisableCulling" ]
+    },
+
+    "xp_furniture_outline:spider": {
+      "-states": [ "DisableCulling" ],
+      "+states": [
+        "EnableStencilTest",
+        "InvertCulling"
+      ],
+
+      "-defines": [ "FANCY" ],
+
+      "depthFunc": "Always",
+
+      "frontFace": {
+        "stencilFunc": "NotEqual"
+      },
+
+      "stencilRef": 3
+    },
+    "xp_furniture_outlinebase:entity_alphatest": {
+      "+states": [
+        "EnableStencilTest",
+        "StencilWrite"
+      ],
+      "+defines": [ "USE_UV_ANIM" ],
+
+      "frontFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+      "backFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+
+      "stencilRef": 3
+    },
+    "xp_furniture_lantern:spider": {
+      "+states": [
+        "EnableStencilTest",
+        "StencilWrite"
+      ],
+      "+defines": [ "USE_UV_ANIM" ],
+
+      "frontFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+      "backFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+
+      "stencilRef": 3
+    },
+
+    // Spider material just extends entity_emissive_alpha
+    "xp_furniture_outline_vv:entity_emissive_alpha": {
+      "-states": [ "DisableCulling" ],
+      "+states": [ "InvertCulling" ],
+      "-defines": [ "FANCY" ],
+      "depthFunc": "LessEqual"
+    },
+    "xp_furniture_outlinebase_vv:entity_alphatest": {
+      "+defines": [ "USE_UV_ANIM" ]
+    },
+    "xp_furniture_lantern_vv:entity_emissive_alpha": {
+      "+defines": [ "USE_UV_ANIM" ]
+    },
+
+    "xp_furniture_uvanim:entity_alphatest": {
+      "+defines": [ "USE_UV_ANIM" ],
+      "+samplerStates": [
+        {
+          "samplerIndex": 0,
+          "textureWrap": "Repeat"
+        }
+      ]
+    },
+    "xp_furniture_uvanim_statues:xp_furniture_uvanim": {
+      "-states": [ "DisableCulling" ]
+    },
+    "xp_furniture_uvanimblend:entity_alphablend": {
+      "+defines": [ "USE_UV_ANIM" ],
+      "+samplerStates": [
+        {
+          "samplerIndex": 0,
+          "textureWrap": "Repeat"
+        }
+      ]
+    },
+
+    "xp_furniture_boutline:entity_alphatest": {
+      "-defines": [ "SMOOTH" ],
+      "+states": [ "DisableDepthWrite" ],
+      "depthFunc": "LessEqual"
+    },
+
+    "xp_furniture_bdestruct:entity_alphablend": {
+			"blendSrc": "DestColor",
+			"blendDst": "Zero",
+      "-defines": [ "FANCY" ],
+      "+states": [ "DisableDepthWrite" ],
+
+      "+defines": [ "USE_UV_ANIM" ],
+      "+samplerStates": [
+        {
+          "samplerIndex": 0,
+          "textureFilter": "Point",
+          "textureWrap": "Repeat"
+        }
+      ]
+    },
+    "xp_furniture_bdestructmask:xp_furniture_bdestruct": {
+      "-defines": [ "USE_UV_ANIM" ],
+      "depthFunc": "LessEqual"
+    },
+
+    "xp_furniture_tool_rach:entity_alphatest": {
+      "-states": [ "DisableCulling" ]
+    }
+
+  }
+}

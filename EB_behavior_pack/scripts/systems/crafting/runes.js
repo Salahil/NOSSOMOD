@@ -25,7 +25,8 @@ function getAnvilOnHellCore(dim, loc) {
         anvil = dim.getBlock({ x: loc.x, y: loc.y - 1, z: loc.z });
     }
     if (anvil?.typeId !== "minecraft:anvil") return null;
-    if (anvil.getRelative("down").typeId !== "enormousbedrock:hell_core") return null;
+    const below = anvil.offset({ x: 0, y: -1, z: 0 });
+    if (below?.typeId !== "enormousbedrock:hell_core") return null;
     return anvil;
 }
 

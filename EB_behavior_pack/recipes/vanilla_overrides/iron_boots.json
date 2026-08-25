@@ -4,17 +4,38 @@
     "description": {
       "identifier": "minecraft:iron_boots"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "   ",
       "I I",
       "FLF"
     ],
     "key": {
-      "I": { "item": "minecraft:iron_ingot" },
-      "F": { "item": "minecraft:rabbit_hide" },
-      "L": { "item": "minecraft:leather" }
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "F": {
+        "item": "minecraft:rabbit_hide"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      }
     },
-    "result": { "item": "minecraft:iron_boots" }
+    "result": {
+      "item": "minecraft:iron_boots"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      },
+      {
+        "item": "minecraft:rabbit_hide"
+      },
+      {
+        "item": "minecraft:leather"
+      }
+    ]
   }
 }

@@ -16,6 +16,12 @@ import {
 const D = CONFIG.durability;
 const armorSnap = new Map();
 
+system.runInterval(() => {
+    for (const player of world.getPlayers()) {
+        armorSnap.set(player.id, snapshotArmor(player));
+    }
+}, 1);
+
 function isOxidationImmune(item) {
     return itemHasTag(item, D.tags.oxidationImmune);
 }
@@ -63,7 +69,7 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
     const item = event.itemStackAfterBreak ?? player.getComponent("equippable")?.getEquipment("Mainhand");
     if (!item || !hasDurability(item)) return;
 
-    const blockId = block?.typeId;
+    const blockId = event.brokenBlockPermutation?.type?.id ?? block?.typeId;
     const use = evaluateToolUse(item.typeId, blockId);
     if (use.correct === null) return;
 
@@ -76,21 +82,14 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
     setMainhand(player, adjusted);
 });
 
-world.beforeEvents.entityHurt.subscribe((event) => {
-    const victim = event.hurtEntity;
-    if (victim?.typeId === "minecraft:player") {
-        armorSnap.set(victim.id, snapshotArmor(victim));
-    }
-});
-
 world.afterEvents.entityHurt.subscribe((event) => {
     const victim = event.hurtEntity;
     if (victim?.typeId === "minecraft:player") {
         const snap = armorSnap.get(victim.id);
         if (snap) {
             applyArmorSnapReduction(victim, snap, D.armor.combatWearMultiplier);
-            armorSnap.delete(victim.id);
         }
+        armorSnap.set(victim.id, snapshotArmor(victim));
         return;
     }
 

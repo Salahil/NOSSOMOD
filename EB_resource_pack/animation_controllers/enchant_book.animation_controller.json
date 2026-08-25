@@ -1,0 +1,44 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.enchant_book": {
+      "initial_state": "closed_idle",
+      "states": {
+        "closed_idle": {
+          "animations": [ "idle", "spin" ],
+          "transitions": [
+            { "opening": "query.distance_from_camera <= 4.5" }
+          ]
+        },
+        "opening": {
+          "animations": [ "open" ],
+          "transitions": [
+            { "open_idle": "query.anim_time >= 0.98" },
+            { "closing": "query.distance_from_camera > 4.9" }
+          ]
+        },
+        "open_idle": {
+          "animations": [ "open_idle" ],
+          "transitions": [
+            { "closing": "query.distance_from_camera > 4.9" },
+            { "flip": "math.random_integer(0, 220) == 0" }
+          ]
+        },
+        "flip": {
+          "animations": [ "page_flip" ],
+          "transitions": [
+            { "open_idle": "query.anim_time >= 0.33" },
+            { "closing": "query.distance_from_camera > 4.9" }
+          ]
+        },
+        "closing": {
+          "animations": [ "close" ],
+          "transitions": [
+            { "closed_idle": "query.anim_time >= 0.98" },
+            { "opening": "query.distance_from_camera <= 4.5" }
+          ]
+        }
+      }
+    }
+  }
+}

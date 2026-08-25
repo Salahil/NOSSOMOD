@@ -1,20 +1,41 @@
 {
-    "format_version": "1.20.10",
-    "minecraft:recipe_shaped": {
-      "description": {
-        "identifier": "minecraft:copper_helmet"
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:copper_helmet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "III",
+      "ILI",
+      "F F"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:copper_ingot"
       },
-      "tags": [ "crafting_table" ],
-      "pattern": [
-        "III",
-        "ILI",
-        "F F"
-      ],
-      "key": {
-        "I": { "item": "minecraft:copper_ingot" },
-        "L": { "item": "minecraft:leather" },
-        "F": { "item": "minecraft:rabbit_hide" }
+      "L": {
+        "item": "minecraft:leather"
       },
-      "result": { "item": "minecraft:copper_helmet" }
-    }
+      "F": {
+        "item": "minecraft:rabbit_hide"
+      }
+    },
+    "result": {
+      "item": "minecraft:copper_helmet"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "item": "minecraft:leather"
+      },
+      {
+        "item": "minecraft:rabbit_hide"
+      }
+    ]
   }
+}

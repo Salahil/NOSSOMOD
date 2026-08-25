@@ -1,28 +1,41 @@
 {
-	"format_version": "1.20.80",
+	"format_version": "1.21.60",
 	"minecraft:block": {
 		"description": {
 			"identifier": "enormousbedrock:hell_core",
 			"menu_category": {
-				"category": "items" 
+				"category": "items"
 			}
 		},
 		"components": {
-			"minecraft:light_emission": 15,
+			"minecraft:display_name": "tile.enormousbedrock:hell_core.name",
+			"minecraft:light_emission": 10,
+			"minecraft:lighting_color": {
+				"r": 0.25,
+				"g": 0.63,
+				"b": 1.0
+			},
 			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
 			"minecraft:movable": {
-				"movement_type": "popped"
+				"movement_type": "push_pull"
 			},
-			"minecraft:friction": 0.9,
-			"minecraft:map_color": "#FFFFFF",
+			"minecraft:map_color": "#3FA1FF",
+			"minecraft:redstone_producer": {
+				"power": 1
+			},
 			"minecraft:redstone_conductivity": {
-				"redstone_signal": 1
+				"redstone_conductor": true,
+				"allows_wire_to_step_down": true
 			},
-			"minecraft:unit_cube": {},
+			"minecraft:geometry": "minecraft:geometry.full_block",
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "hell_core",
-					"render_method": "opaque"
+					"texture": "enormousbedrock:hell_core",
+					"render_method": "opaque",
+					"face_dimming": false,
+					"ambient_occlusion": false,
+					"emissive": true
 				}
 			}
 		}

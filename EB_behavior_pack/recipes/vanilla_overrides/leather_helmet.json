@@ -1,20 +1,41 @@
 {
-    "format_version": "1.20.10",
-    "minecraft:recipe_shaped": {
-      "description": {
-        "identifier": "minecraft:leather_helmet"
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:leather_helmet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "III",
+      "ILI",
+      "F F"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:leather"
       },
-      "tags": [ "crafting_table" ],
-      "pattern": [
-        "III",
-        "ILI",
-        "F F"
-      ],
-      "key": {
-        "I": { "item": "minecraft:leather" },
-        "L": { "item": "minecraft:string" },
-        "F": { "item": "minecraft:rabbit_hide" }
+      "L": {
+        "item": "minecraft:string"
       },
-      "result": { "item": "minecraft:leather_helmet" }
-    }
+      "F": {
+        "item": "minecraft:rabbit_hide"
+      }
+    },
+    "result": {
+      "item": "minecraft:leather_helmet"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:leather"
+      },
+      {
+        "item": "minecraft:string"
+      },
+      {
+        "item": "minecraft:rabbit_hide"
+      }
+    ]
   }
+}

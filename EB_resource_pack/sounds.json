@@ -1,0 +1,189 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "xp_furniture:butterfly": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:merchant": {
+        "events": {
+          "ambient": "xp_furniture:merchant.idle",
+          "death": "xp_furniture:merchant.death",
+          "hurt": "xp_furniture:merchant.hurt",
+          "haggle": "",
+          "haggle.no": "",
+          "haggle.yes": "xp_furniture:merchant.trade"
+        },
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "volume": 1.0
+      },
+      "xp_furniture:moth": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:cabinet": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:counter": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:cupboard": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:sideboard": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:big_chest": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:cooking_pan": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:crate": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:display_case": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:glass_jar": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:hanging_item_sign": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:slab_chest": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      },
+      "xp_furniture:tool_rack": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        },
+        "pitch": 0.0,
+        "volume": 0.0
+      }
+    }
+  }
+}

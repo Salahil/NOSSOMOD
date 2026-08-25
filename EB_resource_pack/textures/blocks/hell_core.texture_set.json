@@ -1,0 +1,19 @@
+{
+    "format_version": "1.21.30",
+    "minecraft:texture_set": {
+        "color": "hell_core",
+        "metalness_emissive_roughness_subsurface": "hell_core_mers",
+        "point_light": {
+            "enabled": true,
+            "color": {
+                "r": 0.25,
+                "g": 0.63,
+                "b": 1.0
+            },
+            "intensity": 2.5,
+            "radius": 6.0,
+            "attenuation_linear": 0.5,
+            "attenuation_quadratic": 0.75
+        }
+    }
+}
