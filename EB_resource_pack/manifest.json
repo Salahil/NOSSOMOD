@@ -4,7 +4,7 @@
 		"description": "Texturas e Modelos do Enormous Bedrock, tome cuidado! Eu não sou nem um pouco bom em modelar 3D muito menos com pixelart!",
 		"name": "Enormous Bedrock RP",
 		"uuid": "c67a1816-6d27-48b9-bb17-9d745236e48f",
-		"version": [1, 6, 7],
+		"version": [2, 0, 0],
 		"min_engine_version": [1, 21, 0]
 	},
 	"modules": [
@@ -12,7 +12,7 @@
 			"description": "Resource Pack",
 			"type": "resources",
 			"uuid": "e9c37927-d0b0-4f32-869a-66c0511b17c1",
-			"version": [1, 6, 7]
+			"version": [2, 0, 0]
 		}
 	],
 	"metadata": {

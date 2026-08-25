@@ -1,5 +1,6 @@
-import { system, world } from "@minecraft/server";
+import { system, world, ItemStack } from "@minecraft/server";
 import { safeGetBlock, setBlockId } from "../../lib/blocks.js";
+import { HELL_CORE_ID } from "../../lib/hell_core.js";
 
 // Armazena rituais ativos
 const activeRituals = new Map();
@@ -79,30 +80,34 @@ function completeRitual(ritual) {
     const { dimension, pos } = ritual;
     console.log("COMPLETANDO RITUAL na posição:", pos);
 
-    // 1. Explodir a lava (mas não destruir nada)
+    // 1. Substituir a lava central por ar primeiro (evita queimar o item)
+    setBlockId(dimension, pos, "minecraft:air");
+
+    // 2. Explodir (mas não destruir nada)
     try {
         dimension.createExplosion(
             { x: pos.x + 0.5, y: pos.y + 0.5, z: pos.z + 0.5 },
-            1, // Raio pequeno
-            { breaksBlocks: false, causesFire: true }
+            1,
+            { breaksBlocks: false, causesFire: false }
         );
     } catch (e) {
         console.error("Erro explodindo:", e);
     }
 
-    // 2. Spawnar item do Hell Core na posição da lava (flutuando)
+    // 3. Spawnar item do Hell Core ACIMA da posição central (evita cair na lava)
     try {
-        console.log("Spawnando item");
+        console.log("Spawnando item:", HELL_CORE_ID);
+        const hellCoreItem = new ItemStack(HELL_CORE_ID, 1);
         const itemEntity = dimension.spawnItem(
-            { typeId: "enormousbedrock:hell_core", amount: 1 },
-            { x: pos.x + 0.5, y: pos.y + 0.5, z: pos.z + 0.5 }
+            hellCoreItem,
+            { x: pos.x + 0.5, y: pos.y + 1.2, z: pos.z + 0.5 }
         );
-        console.log("Item spawnado com sucesso:", itemEntity);
+        console.log("Item spawnado com sucesso:", itemEntity?.typeId);
     } catch (e) {
         console.error("Erro ao spawnar item:", e);
     }
 
-    // 3. Convertendo as obsidianas choronas para normal (4 laterais + abaixo)
+    // 4. Convertendo as obsidianas choronas para normal (4 laterais + abaixo)
     const obsidianPositions = [
         { x: 1, y: 0, z: 0 },
         { x: -1, y: 0, z: 0 },
@@ -119,7 +124,7 @@ function completeRitual(ritual) {
         setBlockId(dimension, op, "minecraft:obsidian");
     }
 
-    // 4. Convertendo areia da alma para terra da alma em raio de 5 blocos
+    // 5. Convertendo areia da alma para terra da alma em raio de 5 blocos
     for (let dx = -5; dx <= 5; dx++) {
         for (let dz = -5; dz <= 5; dz++) {
             for (let dy = -2; dy <= 2; dy++) {

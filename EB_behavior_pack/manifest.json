@@ -4,7 +4,7 @@
 		"description": "Itens e Lógica do Enormous Bedrock, use com sabedoria... esse é o meu xodó!",
 		"name": "Enormous Bedrock BP",
 		"uuid": "a96484cc-04c0-41e3-9299-09a36c5d5d8a",
-		"version": [1, 6, 7],
+		"version": [2, 0, 0],
 		"min_engine_version": [1, 21, 0]
 	},
 	"modules": [
@@ -12,14 +12,14 @@
 			"description": "Behavior Pack",
 			"type": "data",
 			"uuid": "b091c70a-86e8-4f97-8f6a-f10591a46c4a",
-			"version": [1, 6, 7]
+			"version": [2, 0, 0]
 		},
 		{
 			"description": "Scripts do Enormous Bedrock",
 			"type": "script",
 			"language": "javascript",
 			"entry": "scripts/main.js",
-			"version": [1, 6, 7],
+			"version": [2, 0, 0],
 			"uuid": "d6860771-0913-40e0-a832-f4f4f32b5d98"
 		}
 	],
@@ -34,7 +34,7 @@
 		},
 		{
 			"uuid": "c67a1816-6d27-48b9-bb17-9d745236e48f",
-			"version": [1, 6, 7]
+			"version": [2, 0, 0]
 		}
 	]
 }

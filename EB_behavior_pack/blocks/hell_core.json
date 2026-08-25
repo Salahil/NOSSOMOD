@@ -30,6 +30,24 @@
 				"allows_wire_to_step_down": true
 			},
 			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:collision_box": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			},
+			"minecraft:selection_box": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							{ "tags": "query.any_tag('stone', 'metal', 'dirt', 'sand', 'wood', 'immovable')" }
+						],
+						"allowed_faces": ["up", "down", "side"]
+					}
+				]
+			},
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "enormousbedrock:hell_core",
